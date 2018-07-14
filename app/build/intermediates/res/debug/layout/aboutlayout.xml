@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000000"
+
+        android:weightSum="1">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff989898"
+        android:text="Binary Converter"
+        android:gravity="center"
+        android:textSize="29dp"
+        android:paddingTop="10dp"
+
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff989898"
+        android:text="@string/StrAbout"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:paddingTop="100dp"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:textColor="#fffdfdfe"
+        android:text="@string/Creater"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:paddingTop="100dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="4.57" />
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+<!-- From: file:/E:/android_Projects/BinaryConverter/app/src/main/res/layout/aboutlayout.xml -->

@@ -1,0 +1,380 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#000000"
+    tools:context=".MainActivity"
+    android:id="@+id/MainLayout">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+         >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/scrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <TextView
+        android:text="Dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+
+        android:id="@+id/Dec"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DecText"
+        android:layout_alignBottom="@+id/Dec"
+        android:layout_toRightOf="@+id/Dec"
+        android:layout_toEndOf="@+id/DecText"
+        android:layout_marginLeft="30dp"
+        android:textColor="#e1fdfdfe"
+        android:background="#32fdfdfe"
+        android:textSize="20sp"
+        android:minWidth="100sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hex"
+        android:id="@+id/Hex"
+        android:layout_marginTop="2sp"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/DecText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/HexText"
+        android:textColor="#e1fdfdfe"
+        android:background="#32fdfdfe"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/Hex"
+        android:layout_alignLeft="@+id/DecText"
+        android:layout_alignStart="@+id/DecText"
+        android:minWidth="100sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oct"
+        android:id="@+id/Bin"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/Hex"
+        android:layout_alignRight="@+id/Hex"
+        android:layout_alignEnd="@+id/Hex" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BinText"
+        android:textColor="#e1fdfdfe"
+        android:background="#32fdfdfe"
+        android:textSize="20sp"
+        android:layout_below="@+id/Hex"
+        android:layout_marginTop="7dp"
+        android:layout_alignLeft="@+id/HexText"
+        android:layout_alignStart="@+id/HexText"
+        android:minWidth="100sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bin"
+        android:id="@+id/Oct"
+        android:textSize="25sp"
+        android:textIsSelectable="false"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/Bin"
+        android:layout_alignLeft="@+id/Bin"
+        android:layout_alignStart="@+id/Bin" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/OctText"
+        android:textColor="#e1fdfdfe"
+        android:background="#32fdfdfe"
+        android:textSize="20sp"
+        android:minWidth="100sp"
+        android:layout_alignTop="@+id/Oct"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/BinText"
+        android:layout_alignStart="@+id/BinText" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bin"
+        android:onClick = "BinFun"
+        android:id="@+id/BtnBin"
+        android:layout_marginTop="25sp"
+        android:layout_below="@+id/OctText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:textColor="#ffffff" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hex"
+        android:onClick = "HexFun"
+        android:id="@+id/BtnHex"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/InputText"
+        android:layout_toRightOf="@+id/BtnBin"
+        android:layout_toEndOf="@+id/BtnBin" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oct"
+        android:onClick = "OctFun"
+        android:id="@+id/BtnOct"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/BtnHex"
+        android:layout_toRightOf="@+id/BtnHex"
+        android:textColor="#ffffff" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dec"
+        android:onClick = "DecFun"
+        android:id="@+id/BtnDec"
+        android:layout_alignTop="@+id/BtnOct"
+        android:layout_toRightOf="@+id/BtnOct"
+        android:layout_toEndOf="@+id/BtnOct"
+        android:textSize="20sp"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/InputText"
+        android:textSize="25sp"
+        android:hint="Input"
+        android:textColor="#e1fdfdfe"
+        android:layout_below="@+id/BtnBin"
+        android:layout_alignRight="@+id/OctText"
+        android:layout_alignEnd="@+id/OctText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:id="@+id/btn1"
+        android:onClick = "add1"
+        android:layout_below="@+id/InputText"
+        android:layout_alignLeft="@+id/Bin"
+        android:layout_alignStart="@+id/Bin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:id="@+id/btn4"
+        android:onClick = "add4"
+        android:layout_below="@+id/btn1"
+        android:layout_alignLeft="@+id/btn1"
+        android:layout_alignStart="@+id/btn1"
+        android:layout_alignRight="@+id/btn1"
+        android:layout_alignEnd="@+id/btn1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:id="@+id/btn7"
+        android:onClick = "add7"
+        android:layout_below="@+id/btn4"
+        android:layout_alignLeft="@+id/btn4"
+        android:layout_alignStart="@+id/btn4"
+        android:layout_toLeftOf="@+id/btn8"
+        android:layout_toStartOf="@+id/btn8" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/btn0"
+        android:onClick = "add0"
+        android:layout_below="@+id/btn7"
+        android:layout_alignRight="@+id/btn4"
+        android:layout_alignEnd="@+id/btn4"
+        android:layout_alignLeft="@+id/btn7"
+        android:layout_alignStart="@+id/btn7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:id="@+id/btn2"
+        android:onClick = "add2"
+        android:layout_toEndOf="@+id/btn7"
+        android:layout_above="@+id/btn4"
+        android:layout_toRightOf="@+id/btn7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:id="@+id/btn5"
+        android:onClick = "add5"
+        android:layout_toEndOf="@+id/btn4"
+        android:layout_alignTop="@+id/btn4"
+        android:layout_toRightOf="@+id/btn4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:id="@+id/btn8"
+        android:onClick = "add8"
+        android:layout_toEndOf="@+id/btn4"
+        android:layout_below="@+id/btn5"
+        android:layout_toRightOf="@+id/btn4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:id="@+id/btn3"
+        android:onClick = "add3"
+        android:layout_toEndOf="@+id/btn2"
+        android:layout_alignTop="@+id/btn2"
+        android:layout_toRightOf="@+id/btn2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:id="@+id/btn6"
+        android:onClick = "add6"
+        android:layout_toEndOf="@+id/btn2"
+        android:layout_alignTop="@+id/btn5"
+        android:layout_toRightOf="@+id/btn2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:id="@+id/btn9"
+        android:onClick = "add9"
+        android:layout_toEndOf="@+id/btn2"
+        android:layout_alignTop="@+id/btn8"
+        android:layout_toRightOf="@+id/btn2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F"
+        android:id="@+id/btnF"
+        android:onClick = "addF"
+        android:layout_toEndOf="@+id/btn0"
+        android:layout_alignTop="@+id/btn0"
+        android:layout_toRightOf="@+id/btn0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E"
+        android:id="@+id/btnE"
+        android:onClick = "addE"
+        android:layout_toEndOf="@+id/btn2"
+        android:layout_alignTop="@+id/btnF"
+        android:layout_toRightOf="@+id/btn2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:id="@+id/btnA"
+        android:onClick = "addA"
+        android:layout_toEndOf="@+id/btn3"
+        android:layout_alignTop="@+id/btn3"
+        android:layout_toRightOf="@+id/btn3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:id="@+id/btnB"
+        android:onClick = "addB"
+        android:layout_toEndOf="@+id/btn6"
+        android:layout_alignTop="@+id/btn6"
+        android:layout_toRightOf="@+id/btn6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:id="@+id/btnC"
+        android:onClick = "addC"
+        android:layout_toEndOf="@+id/btn9"
+        android:layout_above="@+id/btnE"
+        android:layout_toRightOf="@+id/btn9" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D"
+        android:id="@+id/btnD"
+        android:onClick = "addD"
+        android:layout_toEndOf="@+id/btnE"
+        android:layout_alignTop="@+id/btnE"
+        android:layout_toRightOf="@+id/btnE"
+        android:singleLine="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear All"
+        android:id="@+id/btnClsAll"
+        android:onClick="clsAll"
+        android:layout_below="@+id/btn0"
+        android:layout_alignRight="@+id/btnE"
+        android:layout_alignEnd="@+id/btnE"
+        android:layout_alignLeft="@+id/btn0"
+        android:layout_alignStart="@+id/btn0" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bck"
+        android:id="@+id/btnCls"
+        android:onClick="cls"
+        android:layout_alignTop="@+id/btnClsAll"
+        android:layout_alignLeft="@+id/btnD"
+        android:layout_alignStart="@+id/btnD" />
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+<!-- From: file:/E:/android_Projects/BinaryConverter/app/src/main/res/layout/activity_main.xml -->
